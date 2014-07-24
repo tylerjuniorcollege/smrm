@@ -1,0 +1,21 @@
+{
+	"name":"tylerjrcollege/smrm",
+	"description":"SMRM (Social Media Relationship Manager) is a web application built with Zend Framework 2 to help track social media profiles across multiple networks",
+	"authors":[
+		{
+			"name":"Duane Jeffers",
+			"email":"",
+			"homepage":"",
+			"role":"Developer"
+		}
+	],
+	"require":{
+		"zendframework/zendframework": "2.3.1",
+		"facebook/php-sdk-v4" : "4.0.*",
+		"jublonet/codebird-php": "2.5.0",
+		"php-instagram-api/php-instagram-api": "dev-master",
+		"thetwelvelabs/foursquare": "0.2.*",
+		"pda/pheanstalk": "3.*@dev",
+		"duanejeffers/cli.class.php": "dev-master"
+	}
+}
