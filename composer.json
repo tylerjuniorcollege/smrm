@@ -17,5 +17,10 @@
 		"thetwelvelabs/foursquare": "0.2.*",
 		"pda/pheanstalk": "3.*@dev",
 		"duanejeffers/cli.class.php": "dev-master"
+	},
+	"autoload":{
+		"psr-0":{
+			"User":"module/User/src"
+		}
 	}
 }
