@@ -1,3 +1,6 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
@@ -38,6 +41,7 @@
 
 #page-content-wrapper {
   width: 100%;
+  padding: 5px;
 }
 
 #sidebar_menu li a, .sidebar-nav li a {
@@ -107,7 +111,7 @@
 {
    float:right;
    padding-right: 30px;
-   padding-top:20px;
+   padding-top:23px;
 }
 .sub_icon
 {
@@ -115,6 +119,14 @@
    padding-right: 32px;
    padding-top:10px;
 }
+
+.fa-sub_icon
+{
+  float: right;
+  padding-right: 25px;
+  padding-top: 15px;
+}
+
 .content-header {
   height: 65px;
   line-height: 65px;
