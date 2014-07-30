@@ -16,7 +16,9 @@
 		"php-instagram-api/php-instagram-api": "dev-master",
 		"thetwelvelabs/foursquare": "0.2.*",
 		"pda/pheanstalk": "3.*@dev",
-		"duanejeffers/cli.class.php": "dev-master"
+		"duanejeffers/cli.class.php": "dev-master",
+		"guzzlehttp/guzzle": "~4.0",
+		"kriswallsmith/buzz": "0.11"
 	},
 	"autoload":{
 		"psr-0":{
