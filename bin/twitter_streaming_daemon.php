@@ -2,7 +2,7 @@
 <?php
 /**
  * SMRM - Social Media Relationship Manager
- * Twitter Daemon
+ * Twitter Streaming Daemon
  * 
  * @author Duane Jeffers <djef@tjc.edu>
  * @link http://github.com/tylerjuniorcollege/smrm
@@ -13,9 +13,12 @@
  * is the twitter required backoff/polling ratelimit features.
  **/
 
+// Update working folder for including scripts.
+chdir(dirname(__DIR__));
+
 // Add Autoloader to the application:
 include_once('../vendor/autoload.php');
 
 $cli = new Cli(array());
 
-$cli->print_line('Testing Twitter Daemon');
+// Load in local database information.
