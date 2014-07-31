@@ -11,23 +11,34 @@
 
 return array(
 	'controllers' => array(
-		'invokeables' => array(
+		'invokables' => array(
 			'User\Controller\User' => 'User\Controller\UserController'
 		)
 	),
 	'router' => array(
 		'routes' => array(
 			'user' => array(
-				'type' => 'segment',
+				'type' => 'Literal',
 				'options' => array(
-					'route' => '/user[/][:action][:id]',
-					'constraints' => array(
-						'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-						'id' => '[0-9]+',
-					),
+					'route' => '/user',
 					'defaults' => array(
-						'controller' => 'User\Controller\User',
+						'__NAMESPACE__' => 'User\Controller',
+						'controller' => 'User',
 						'action' => 'index'
+					)
+				),
+				'may_terminate' => true,
+				'child_routes' => array(
+					'default' => array(
+						'type' => 'Segment',
+						'options' => array(
+							'route' => '/[:controller[/:action]]',
+							'constraints' => array(
+								'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+								'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+							),
+							'defaults' => array()
+						)
 					)
 				)
 			)
@@ -35,7 +46,7 @@ return array(
 	),
 	'view_manager' => array(
 		'template_path_stack' => array(
-			'user' => __DIR__ . '/../view'
+			'User' => __DIR__ . '/../view'
 		)
 	)
 );
