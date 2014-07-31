@@ -16,7 +16,7 @@ use Zend\View\Model\ViewModel;
 
 class UserController extends AbstractActionController {
 	public function indexAction() {
-
+		return new ViewModel();
 	}
 
 	public function loginAction() {
@@ -36,6 +36,10 @@ class UserController extends AbstractActionController {
 	}
 
 	public function deleteAction() {
+
+	}
+
+	public function searchAction() {
 		
 	}
 
