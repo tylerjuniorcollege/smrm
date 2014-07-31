@@ -17,8 +17,12 @@
 chdir(dirname(__DIR__));
 
 // Add Autoloader to the application:
-include_once('../vendor/autoload.php');
+include_once('vendor/autoload.php');
 
 $cli = new Cli(array());
 
 // Load in local database information.
+
+$applicationSettings = include_once('config/autoload/database.local.php');
+
+$cli->print_dump($applicationSettings);
