@@ -23,7 +23,8 @@
 	},
 	"autoload":{
 		"psr-0":{
-			"User":"module/User/src"
+			"User":"module/User/src",
+			"Admin":"module/Admin/src"
 		}
 	}
 }
