@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4e85bfa40219d38d5085302afceaee73",
+    "hash": "1fa1e182aec2b2ca14bb8de74a946eda",
     "packages": [
         {
             "name": "duanejeffers/cli.class.php",
@@ -92,16 +92,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "4.1.4",
+            "version": "4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "5ae164dae6e65784286a698800190bc094407f7c"
+                "reference": "e49ad58038b46a0d7739627a72f6d998cd92d3d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/5ae164dae6e65784286a698800190bc094407f7c",
-                "reference": "5ae164dae6e65784286a698800190bc094407f7c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/e49ad58038b46a0d7739627a72f6d998cd92d3d6",
+                "reference": "e49ad58038b46a0d7739627a72f6d998cd92d3d6",
                 "shasum": ""
             },
             "require": {
@@ -153,7 +153,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-23 00:52:39"
+            "time": "2014-08-03 20:38:45"
         },
         {
             "name": "guzzlehttp/streams",
@@ -207,64 +207,6 @@
                 "stream"
             ],
             "time": "2014-07-19 18:43:42"
-        },
-        {
-            "name": "j4mie/idiorm",
-            "version": "v1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/j4mie/idiorm.git",
-                "reference": "b0922d8719a94e3a0e0e4a0ca3876f4f91475dcf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/j4mie/idiorm/zipball/b0922d8719a94e3a0e0e4a0ca3876f4f91475dcf",
-                "reference": "b0922d8719a94e3a0e0e4a0ca3876f4f91475dcf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "idiorm.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause",
-                "BSD-3-Clause",
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Simon Holywell",
-                    "email": "treffynnon@php.net",
-                    "homepage": "http://simonholywell.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Jamie Matthews",
-                    "email": "jamie.matthews@gmail.com",
-                    "homepage": "http://j4mie.org",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Durham Hale",
-                    "email": "me@durhamhale.com",
-                    "homepage": "http://durhamhale.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "A lightweight nearly-zero-configuration object-relational mapper and fluent query builder for PHP5",
-            "homepage": "http://j4mie.github.com/idiormandparis",
-            "keywords": [
-                "idiorm",
-                "orm",
-                "query builder"
-            ],
-            "time": "2014-06-23 13:08:57"
         },
         {
             "name": "jublonet/codebird-php",
@@ -676,13 +618,177 @@
             "time": "2014-03-05 22:25:44"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "bjyoungblood/bjy-profiler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bjyoungblood/BjyProfiler.git",
+                "reference": "890d8b522d00c7b5e62210e39812d83a6d99bdfb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bjyoungblood/BjyProfiler/zipball/890d8b522d00c7b5e62210e39812d83a6d99bdfb",
+                "reference": "890d8b522d00c7b5e62210e39812d83a6d99bdfb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "zendframework/zend-db": ">=2.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BjyProfiler": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Youngblood",
+                    "email": "bx.youngblood@gmail.com",
+                    "homepage": "http://bjyoungblood.com/"
+                }
+            ],
+            "description": "Database profiler for Zend\\Db (also plugin for ZendDeveloperTools)",
+            "homepage": "https://github.com/bjyoungblood/BjyProfiler",
+            "keywords": [
+                "db",
+                "profiler",
+                "zdt",
+                "zf2"
+            ],
+            "time": "2014-08-05 14:38:59"
+        },
+        {
+            "name": "skpd/profiler-toolbar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Skpd/profiler-toolbar.git",
+                "reference": "3c5ea4106e876fc5bf1aa0ef80cb246f06ff66fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Skpd/profiler-toolbar/zipball/3c5ea4106e876fc5bf1aa0ef80cb246f06ff66fe",
+                "reference": "3c5ea4106e876fc5bf1aa0ef80cb246f06ff66fe",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xhprof": ">=0.9.2",
+                "php": ">=5.4.0",
+                "zendframework/zend-developer-tools": ">=0.0.2",
+                "zendframework/zendframework": ">=2.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Skpd\\ProfilerToolbar\\": "src/"
+                },
+                "classmap": [
+                    "Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Shabanov",
+                    "email": "dm.skpd@gmail.com"
+                }
+            ],
+            "description": "Profiler toolbar for Zend Developer Tools",
+            "homepage": "https://github.com/Skpd/profiler-toolbar",
+            "keywords": [
+                "Zend Developer Tools",
+                "ZendDeveloperTools",
+                "profiler",
+                "toolbar",
+                "zend framework 2",
+                "zendframework2"
+            ],
+            "time": "2014-03-26 07:08:55"
+        },
+        {
+            "name": "zendframework/zend-developer-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/ZendDeveloperTools.git",
+                "reference": "a9244b9cc17861eb36a7c899d450119575d16d41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/a9244b9cc17861eb36a7c899d450119575d16d41",
+                "reference": "a9244b9cc17861eb36a7c899d450119575d16d41",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-debug": "2.*",
+                "zendframework/zend-eventmanager": "2.*",
+                "zendframework/zend-mvc": "2.*",
+                "zendframework/zend-servicemanager": "2.*",
+                "zendframework/zend-stdlib": "2.*",
+                "zendframework/zend-version": "2.*"
+            },
+            "suggest": {
+                "bjyoungblood/bjy-profiler": "Version: dev-master, allows the usage of the (Zend) Db collector.",
+                "ocramius/ocra-service-manager": "OcraServiceManager can help you track dependencies within your application."
+            },
+            "type": "zf-module",
+            "autoload": {
+                "psr-0": {
+                    "ZendDeveloperTools": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                },
+                {
+                    "name": "Eric Boh",
+                    "email": "cossish@gmail.com"
+                }
+            ],
+            "description": "Module for developer and debug tools for working with the ZF2 MVC layer.",
+            "homepage": "https://github.com/zendframework/ZendDeveloperTools",
+            "keywords": [
+                "debug",
+                "developer",
+                "module",
+                "zf2"
+            ],
+            "time": "2014-07-11 19:51:50"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "php-instagram-api/php-instagram-api": 20,
         "pda/pheanstalk": 20,
-        "duanejeffers/cli.class.php": 20
+        "duanejeffers/cli.class.php": 20,
+        "zendframework/zend-developer-tools": 20,
+        "bjyoungblood/bjy-profiler": 20,
+        "skpd/profiler-toolbar": 20
     },
     "prefer-stable": false,
     "platform": [],

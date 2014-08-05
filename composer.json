@@ -18,8 +18,12 @@
 		"pda/pheanstalk": "3.*@dev",
 		"duanejeffers/cli.class.php": "dev-master",
 		"guzzlehttp/guzzle": "~4.0",
-		"kriswallsmith/buzz": "0.11",
-		"j4mie/idiorm": "1.5.1"
+		"kriswallsmith/buzz": "0.11"
+	},
+	"require-dev": {
+		"zendframework/zend-developer-tools": "dev-master",
+		"bjyoungblood/bjy-profiler": "dev-master",
+		"skpd/profiler-toolbar": "dev-master"
 	},
 	"autoload":{
 		"psr-0":{
