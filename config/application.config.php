@@ -4,6 +4,9 @@ return array(
     'modules' => array(
         'Application',
         'User',
+        'Admin',
+        'ZendDeveloperTools',
+        'Skpd\ProfilerToolbar'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
