@@ -2,4 +2,19 @@
 	// Adding in Infinite Scroll here for use in the main application page.
 	$this->inlineScript()->appendFile('//cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js')
 						 ->appendFile($this->basePath() . '/js/index.js');
+
+	$this->headLink()->appendStylesheet($this->basePath() . '/css/index.css');
 ?>
+<div id="wrapper">
+	<div id="sidebar-wrapper">
+		<ul id="sidebar-menu-toggle" class="sidebar-nav">
+			<li class="sidebar-brand">
+				<a id="menu-toggle">Networks <i class="fa fa-fw fa-lg fa-bars" id="main-icon"></i></a>
+			</li>
+		</ul>
+		<ul class="sidebar-nav">
+			<li><a href="/facebook/feed">Facebook <span id="facebook-updates" class="badge"></span><i class="fa fa-fw fa-lg fa-facebook sub-icon"></i></a></li>
+			<li><a href="/twitter/feed">Twitter <span id="twitter-updates" class="badge"></span><i class="fa fa-fw fa-lg fa-twitter sub-icon"></i></a></li>
+		</ul>
+	</div>
+</div>
