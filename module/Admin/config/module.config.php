@@ -12,7 +12,8 @@
 return array(
 	'controllers' => array(
 		'invokables' => array(
-			'Admin\Controller\Admin' => 'Admin\Controller\AdminController'
+			'Admin\Controller\Admin' => 'Admin\Controller\AdminController',
+			'Admin\Controller\Settings' => 'Admin\Controller\SettingsController'
 		)
 	),
 	'router' => array(
@@ -20,7 +21,7 @@ return array(
 			'admin' => array(
 				'type' => 'Literal',
 				'options' => array(
-					'route' => '/user',
+					'route' => '/admin',
 					'defaults' => array(
 						'__NAMESPACE__' => 'Admin\Controller',
 						'controller' => 'Admin',
