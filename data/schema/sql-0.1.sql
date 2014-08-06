@@ -20,3 +20,8 @@ CREATE TABLE `settings` (
 	`updated` datetime NOT NULL
 ) COMMENT='' ENGINE='InnoDB';
 
+CREATE TABLE `networks` (
+	`networkid` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`network` varchar(250) NOT NULL,
+	`enabled` int(1) NOT NULL
+) COMMENT='' ENGINE='InnoDB';
