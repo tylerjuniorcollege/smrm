@@ -21,4 +21,9 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface {
 	public function getAutoloaderConfig() {
 		
 	}
+	public function getServiceConfig() {
+		return array(
+
+		);
+	}
 }
