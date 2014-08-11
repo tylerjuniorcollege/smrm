@@ -1,0 +1,40 @@
+<?php 
+	$this->headLink()->appendStylesheet($this->basePath() . '/css/user/login.css');
+
+	$form = $this->loginForm;
+	$form->prepare();
+	$form->setAttribute('action', $this->url('zfcuser/login'));
+	$form->setAttribute('method', 'post');
+	$form->setAttribute('class', 'form-signin');
+
+	$identity = $form->get('identity');
+	$identity->setAttributes(array(
+		'class' => 'form-control',
+		'placeholder' => $identity->getLabel(),
+		'required' => 'required',
+		'autofocus' => 'autofocus'
+	));
+
+	$credential = $form->get('credential');
+	$credential->setAttributes(array(
+		'class' => 'form-control',
+		'placeholder' => $credential->getLabel(),
+		'required' => 'required'
+	));
+
+	$submit = $form->get('submit');
+?>
+<?php echo $this->form()->openTag($form); ?>
+	<h2 class="form-signin-heading">Please sign in</h2>
+	<?php echo $this->formElementErrors()
+					->setMessageOpenFormat('<div class="alert alert-danger">')
+					->setMessageSeparatorString('</div><div class="alert alert-danger">')
+					->setMessageCloseString('</div>')
+					->render($identity); ?>
+	<?php echo $this->formEmail($identity) ?>
+	<?php echo $this->formPassword($credential) ?>
+	<?php if ($this->redirect): ?>
+    	<input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
+    <?php endif ?>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+<?php echo $this->form()->closeTag(); ?>
