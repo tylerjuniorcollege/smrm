@@ -58,10 +58,10 @@ return array(
             'Zend\Log\LoggerAbstractServiceFactory',
         ),
         'aliases' => array(
-            //'translator' => 'MvcTranslator',
+            'translator' => 'MvcTranslator',
         ),
     ),
-    /* 'translator' => array(
+    'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
             array(
@@ -70,7 +70,7 @@ return array(
                 'pattern'  => '%s.mo',
             ),
         ),
-    ), */
+    ),
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController'
