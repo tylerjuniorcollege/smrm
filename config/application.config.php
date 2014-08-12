@@ -5,6 +5,7 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'BjyAuthorize',
+        'EdpModuleLayouts',
         'Application',
         'Admin',
         'ZendDeveloperTools',
