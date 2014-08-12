@@ -50,10 +50,25 @@
         </div>
     <?php endif; ?>
         <div class="container-fluid">
-            
-            <?php echo $this->content; ?>
+            <div id="wrapper">
+                <div id="sidebar-wrapper">
+                    <ul id="sidebar-menu-toggle" class="sidebar-nav">
+                        <li class="sidebar-brand"><a id="menu-toggle">Menu <i class="fa fa-fw fa-lg fa-bars" id="main-icon"></i></a></li>
+                    </ul>
+                    <ul class="sidebar-nav">
+                        <li><a href="<?=$this->url('admin/user'); ?>">User Manager <i class="fa fa-fw fa-lg fa-user sub-icon"></i></a></li>
+                        <li><a href="/admin/network">Network Manager<i class="fa fa-fw fa-lg fa-share-alt sub-icon"></i></a></li>
+                        <li><a href="/admin/settings">Settings <i class="fa fa-fw fa-lg fa-cog sub-icon"></i></a></li>
+                    </ul>
+                </div>
+                <div id="page-content-wrapper">
+                    <div class="page-content inset">
+                        <?php echo $this->content; ?>
+                    </div>
+                </div>
         </div> <!-- /container -->
         <?php echo $this->inlineScript()
+                        ->prependFile($this->basePath() . '/js/index.js')
                         ->prependFile($this->basePath() . '/js/application.js')
                         ->prependFile('//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js')
                         ->prependFile('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
