@@ -31,7 +31,7 @@
 					->setMessageSeparatorString('</div><div class="alert alert-danger">')
 					->setMessageCloseString('</div>')
 					->render($identity); ?>
-	<?php echo $this->formEmail($identity) ?>
+	<?php echo $this->formText($identity) ?>
 	<?php echo $this->formPassword($credential) ?>
 	<?php if ($this->redirect): ?>
     	<input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
