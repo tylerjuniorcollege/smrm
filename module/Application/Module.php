@@ -49,4 +49,17 @@ class Module implements
             ),
         );
     }
+
+    public function getViewHelperConfig() 
+    {
+        return array(
+            'factories' => array(
+                'networkSidebar' => function(AbstractPluginManager $pluginManager) {
+                    $serviceLocator = $pluginManager->getServiceLocator();
+
+                    return new View\Helper\NetworkSidebar($serviceLocator->get('Zend\Db\Adapter\Adapter'));
+                }
+            )
+        );
+    }
 }
