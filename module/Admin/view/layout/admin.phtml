@@ -1,0 +1,62 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('SMRM - Social Media Relationship Manager')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+                        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/index.css')
+                        ->prependStylesheet($this->basePath() . '/css/application.css')
+                        ->prependStylesheet('http://fonts.googleapis.com/css?family=Source+Sans+Pro')
+                        ->prependStylesheet('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+                        ->prependStylesheet('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript(); ?>
+    </head>
+    <body>
+    <?php if($this->zfcUserIdentity()): ?>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">SMRM Admin</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/admin"><i class="fa fa-lg fa-cog"></i>&nbsp;&nbsp;Admin</a></li>
+                        <li><a href="/user"><?php echo $this->gravatar($this->zfcUserIdentity()->getEmail(), array('img_size' => 22), array('class' => 'img-circle')) ?> &nbsp;&nbsp; <?php echo $this->zfcUserIdentity()->getDisplayName() ?></a></li>
+                        <li><a href="/user/logout">Logout&nbsp;&nbsp;<i class="fa fa-lg fa-sign-out"></i></a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+        <div class="container-fluid">
+            
+            <?php echo $this->content; ?>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript()
+                        ->prependFile($this->basePath() . '/js/application.js')
+                        ->prependFile('//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js')
+                        ->prependFile('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+                        ->prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') ?>
+    </body>
+</html>
