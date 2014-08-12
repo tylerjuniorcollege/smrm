@@ -13,7 +13,9 @@ return array(
 	'controllers' => array(
 		'invokables' => array(
 			'Admin\Controller\Admin' => 'Admin\Controller\AdminController',
-			'Admin\Controller\Settings' => 'Admin\Controller\SettingsController'
+			'Admin\Controller\Settings' => 'Admin\Controller\SettingsController',
+			'Admin\Controller\Network' => 'Admin\Controller\NetworkController',
+			'Admin\Controller\User' => 'Admin\Controller\UserController'
 		)
 	),
 	'router' => array(
@@ -30,6 +32,19 @@ return array(
 				),
 				'may_terminate' => true,
 				'child_routes' => array(
+					'user' => array(
+						'type' => 'Segment',
+						'options' => array(
+							'route' => '/user[/:action]',
+							'constraints' => array(
+								'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+							),
+							'defaults' => array(
+								'controller' => 'User',
+								'action' => 'index'
+							)
+						)
+					),
 					'default' => array(
 						'type' => 'Segment',
 						'options' => array(
