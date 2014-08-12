@@ -23,6 +23,4 @@ $cli = new Cli(array());
 
 // Load in local database information.
 
-$applicationSettings = include_once('config/autoload/database.local.php');
-
-$cli->print_dump($applicationSettings);
+$databaseSettings = include_once('config/autoload/database.local.php');
