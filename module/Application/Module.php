@@ -11,14 +11,27 @@ namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use BjyAuthorize\View\RedirectionStrategy;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
+use Zend\ServiceManager\AbstractPluginManager;
 
-class Module
+class Module implements 
+    AutoloaderProviderInterface,
+    ConfigProviderInterface,
+    ViewHelperProviderInterface
 {
     public function onBootstrap(MvcEvent $e)
     {
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+
+        // Adding in new redirect strategy for anyone who isn't logged in.
+        $strategy = new RedirectionStrategy();
+        $strategy->setRedirectRoute('zfcuser/login');
+        $eventManager->attach($strategy);
     }
 
     public function getConfig()
